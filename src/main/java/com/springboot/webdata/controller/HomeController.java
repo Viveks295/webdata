@@ -8,7 +8,7 @@ import java.security.Principal;
 
 @Controller
 public class HomeController {
-    @RequestMapping("/")
+    @RequestMapping({"/", "home"})
     public String home(ModelMap model, Principal user){
         //System.out.println("hi");
         String userName = user.getName();
