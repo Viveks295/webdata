@@ -7,7 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class WebDataApplication {
 
 	public static void main(String[] args) {
+		//WebCrawler.crawl();
+		WebCrawler.jsonMapper();
 		SpringApplication.run(WebDataApplication.class, args);
+
 	}
 
 }

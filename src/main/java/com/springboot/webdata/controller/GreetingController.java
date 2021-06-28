@@ -1,5 +1,6 @@
 package com.springboot.webdata.controller;
 
+import com.springboot.webdata.WebCrawler;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
@@ -7,6 +8,10 @@ import java.security.Principal;
 @RestController
 public class GreetingController {
 
+    @RequestMapping(value = "/customer")
+    public String customer() {
+        return WebCrawler.jsonMapper();
+    }
     @RequestMapping(value = "/greeting")
     public String greet(@RequestParam(required = false, value = "name") String userName) {
         return "Hello there" + userName;
